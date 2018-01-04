@@ -1,0 +1,33 @@
+{
+  "name": "zdhelper",
+  "version": "1.0.0",
+  "description": "- https://developer.zendesk.com/rest_api/docs/core/tickets - https://github.com/dashedstripes/zendesk-node-api/   - Represents the request model for calling data over the API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "array-pivot": "^1.0.1",
+    "async": "^2.6.0",
+    "csv": "^2.0.0",
+    "csv-array": "0.0.22",
+    "dialog": "^0.3.1",
+    "express": "^4.16.2",
+    "express-async-await": "^1.1.0",
+    "express-formidable": "^1.0.0",
+    "formidable": "^1.1.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "minimist": "^1.2.0",
+    "moment": "^2.20.1",
+    "node-zendesk": "^1.2.0",
+    "popups": "^1.1.3",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4",
+    "socket.io-file": "^2.0.2",
+    "socket.io-file-client": "^2.0.2",
+    "util": "^0.10.3"
+  }
+}

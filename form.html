@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Zendesk Ticket Manager</title>
+
+</head>
+
+<body>
+  <h1>Upload your CSV below</h1>
+  <h2>Don't worry about the size of your file. We'll take care of that!</h2>
+  <hr>
+  <form action="/" method="post" enctype="multipart/form-data" id="form">
+    <!-- onsubmit="onsubmit()" should be added as another tag above -->
+    <!-- onsubmit="sendFile()" -->
+    <fieldset>
+      <label for="file"></label>
+      <span>Please select a csv file: </span>
+      <input type="file" id="file" name="file" placeholder="Please select a csv file" required/>
+      <br/>
+      <span>What should we do with the file? </span>
+      <select>
+              <option value="delete">Delete Tickets</option>
+              <option value="update">Update Tickets</option>
+              <option value="create">Create Tickets</option>
+      </select>
+      <br/>
+      <input type="submit" value="Upload File" />
+    </fieldset>
+  </form>
+
+  <script src="/client.js"></script>
+  <script>
+  var uploader = io();
+  </script>
+
+</body>
+
+</html>

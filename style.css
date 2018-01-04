@@ -1,0 +1,30 @@
+body {
+  background-color: none;
+}
+
+h1 {
+  color: #45B1E2;
+  font-family: 'apercu';
+  margin-left: inherit;
+  margin-top: 20px;
+  margin-bottom: inherit;
+}
+
+h2 {
+  color: #333333;
+  font-family: 'apercu';
+  margin-left: inherit;
+  margin-top: inherit;
+  margin-bottom: 0px;
+}
+
+fieldset {
+  border: none;
+  font-family: 'geneva';
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+hr {
+  border: none;
+}
