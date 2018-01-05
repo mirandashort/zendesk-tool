@@ -46,8 +46,8 @@ io.on('connection', function(socket) {
   console.log('Socket connected.');
 
   var uploader = new SocketIOFile(socket, {
-    uploadDir: 'data',
-    accepts: ['text/csv'],
+    uploadDir: 'uploads',
+    accepts: ['text/csv', 'application/octet-stream'],
     rename: moment().toISOString()
   });
 
@@ -61,6 +61,7 @@ io.on('connection', function(socket) {
   uploader.on('complete', function(fileInfo) {
     console.log('Upload Complete.');
     console.log(fileInfo);
+    uploader.emit(fileInfo);
   });
   uploader.on('error', function(err) {
     console.log('Error!', err);
@@ -68,7 +69,6 @@ io.on('connection', function(socket) {
   uploader.on('abort', function(fileInfo) {
     console.log('Aborted: ', fileInfo);
   });
-  io.emit('sending file', socketIOFile);
 });
 
 httpServer.listen(3000, function() {
