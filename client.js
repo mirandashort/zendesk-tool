@@ -29,9 +29,9 @@ form.onsubmit = function(ev) {
   // send file element to upload
   var fileEl = document.getElementById('file');
   // or just pass it directly as an object
-//   var uploadIds = uploader.upload(fileEl, {
-//     data: { 'whatever' }
-// });
+  var uploadIds = uploader.upload(fileEl, {
+    data: { }
+});
 };
 
 // async.waterfall([

@@ -48,7 +48,7 @@ io.on('connection', function(socket) {
   var uploader = new SocketIOFile(socket, {
     uploadDir: 'uploads',
     accepts: ['text/csv', 'application/octet-stream'],
-    rename: moment().toISOString()
+    rename: [moment().toISOString()]
   });
 
   uploader.on('start', function(fileInfo) {
